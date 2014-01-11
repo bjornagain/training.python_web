@@ -7,7 +7,7 @@ def server(log_buffer=sys.stderr):
     address = ('127.0.0.1', 10000)
     # TODO: Replace the following line with your code which will instantiate 
     #       a TCP socket with IPv4 Addressing, call the socket you make 'sock'
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     # TODO: Set an option to allow the socket address to be reused immediately
     #       see the end of http://docs.python.org/2/library/socket.html
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -54,6 +54,7 @@ def server(log_buffer=sys.stderr):
                         conn.sendall(data)
                     else:
                         break
+                        
             finally:
                 # TODO: When the inner loop exits, this 'finally' clause will
                 #       be hit. Use that opportunity to close the socket you
@@ -68,7 +69,7 @@ def server(log_buffer=sys.stderr):
         #       Replace the call to `pass` below, which is only there to 
         #       prevent syntax problems
         sock.close()
-        return
+        
 
 
 if __name__ == '__main__':

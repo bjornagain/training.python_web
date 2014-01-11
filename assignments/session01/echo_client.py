@@ -6,7 +6,7 @@ def client(msg, log_buffer=sys.stderr):
     server_address = ('localhost', 10000)
     # TODO: Replace the following line with your code which will instantiate 
     #       a TCP socket with IPv4 Addressing, call the socket you make 'sock'
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM, socket.IPPROTO_TCP)
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     print >>log_buffer, 'connecting to {0} port {1}'.format(*server_address)
     # TODO: connect your socket to the server here.
     sock.connect(server_address)
@@ -24,11 +24,11 @@ def client(msg, log_buffer=sys.stderr):
         # 
         #       Make sure that you log each chunk you receive.  Use the print 
         #       statement below to do it. (The tests expect this log format)
-        chunk = sock.recv(16)
-        if chunk:
+        rcvd = ''
+        while rcvd != msg:
+            chunk = sock.recv(16)
             print >>log_buffer, 'received "{0}"'.format(chunk)
-        else:
-            return
+            rcvd += chunk
     finally:
         # TODO: after you break out of the loop receiving echoed chunks from 
         #       the server you will want to close your client socket.
