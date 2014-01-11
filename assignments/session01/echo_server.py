@@ -53,7 +53,7 @@ def server(log_buffer=sys.stderr):
                     if data:
                         conn.sendall(data)
                     else:
-                        return
+                        break
             finally:
                 # TODO: When the inner loop exits, this 'finally' clause will
                 #       be hit. Use that opportunity to close the socket you
