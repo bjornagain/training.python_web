@@ -1,14 +1,34 @@
 import socket
 import sys
+import mimetypes
+import os
 
-
-def response_ok():
+def resolve_uri(uri):#returns resource and mimetype
+    root = 'webroot'
+    path = os.path.join(root, uri.lstrip('/'))
+    print path
+    if os.path.exists(path):
+        if os.path.isdir(path):
+            contents = '\n'.join(os.listdir(path))
+            return contents, 'text/plain'
+        elif os.path.isfile(path):
+            mimetype = mimetypes.guess_type(path)[0]
+            body = open(path, 'rb').read()
+            return body, mimetype
+    else:
+        print '***VALUEERROR***'
+        raise ValueError("Not Found")
+        
+        
+    
+    
+def response_ok(body, mimetype):
     """returns a basic HTTP response"""
     resp = []
     resp.append("HTTP/1.1 200 OK")
-    resp.append("Content-Type: text/plain")
+    resp.append("Content-Type: %s" % mimetype)
     resp.append("")
-    resp.append("this is a pretty minimal response")
+    resp.append(body)
     return "\r\n".join(resp)
 
 
@@ -19,6 +39,12 @@ def response_method_not_allowed():
     resp.append("")
     return "\r\n".join(resp)
 
+def response_not_found():
+    resp = []
+    resp.append("HTTP/1.1 404 Not Found")
+    resp.append("")
+    return "\r\n".join(resp)
+
 
 def parse_request(request):
     first_line = request.split("\r\n", 1)[0]
@@ -26,6 +52,7 @@ def parse_request(request):
     if method != "GET":
         raise NotImplementedError("We only accept GET")
     print >>sys.stderr, 'request is okay'
+    return uri
 
 
 def server():
@@ -50,11 +77,14 @@ def server():
                         break
 
                 try:
-                    parse_request(request)
+                    uri = parse_request(request)
+                    body, mimetype = resolve_uri(uri)
                 except NotImplementedError:
                     response = response_method_not_allowed()
+                except ValueError:
+                    response = response_not_found()
                 else:
-                    response = response_ok()
+                    response = response_ok(body, mimetype)
 
                 print >>sys.stderr, 'sending response'
                 conn.sendall(response)
