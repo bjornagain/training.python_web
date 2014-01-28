@@ -2,7 +2,7 @@
 #list, sorts them by date and time, and prints them. I wanted to crosscheck the dates against my
 #Google callendar, or at least write some kind of comparison function to flag time conflicts,
 #but this was a tough project and I didn't have time. This is definitely the most useful thing I've
-#learned in either class though. Thanks
+#learned in either class though. Thanks!
 
 from bs4 import BeautifulSoup
 import requests
