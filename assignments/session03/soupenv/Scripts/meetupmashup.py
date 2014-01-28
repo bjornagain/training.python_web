@@ -15,11 +15,6 @@ def find_meetups(base):
     resp.raise_for_status() #<- no-op if status==200
     return resp.content, resp.encoding
 
-def find_games():
-    base = 'http://www.meetup.com/seattlebluegrass/'
-    resp = requests.get(base, timeout=3)
-    resp.raise_for_status() #<- no-op if status==200
-    return resp.content, resp.encoding
 
 def parse_source(html, encoding='utf-8'):
     parsed = BeautifulSoup(html, from_encoding=encoding)
