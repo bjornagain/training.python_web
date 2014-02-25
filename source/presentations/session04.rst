@@ -15,6 +15,37 @@ Wherein we discover the gateways to dynamic processes on a server.
 
 image: The Wandering Angel http://www.flickr.com/photos/wandering_angel/1467802750/ - CC-BY
 
+But First
+---------
+
+.. class:: big-centered
+
+A look at some of the cool mashups you built over the week.
+
+
+But First
+---------
+
+Clean up the git situation.
+
+
+But First
+---------
+
+Before you leave the classroom today, please complete the following tasks:
+
+1. Create a virtualenv called ``flaskenv``
+2. Activate that virtualenv
+3. ``pip install flask`` to your virtualenv
+
+You will need this for some of your homework this week.
+
+But First
+---------
+
+A special note to pay attention to the readings.  You will be expected to have
+read the basics on Jinja2, SQLite3 and Flask **before** class starts.
+
 Previously
 ----------
 
@@ -58,7 +89,7 @@ A computer has an *environment*:
     
     .. class:: small
     
-    ::    
+    ::
     
         C:\> set
         ALLUSERSPROFILE=C:\ProgramData
@@ -76,7 +107,7 @@ This can be manipulated:
     
     .. class:: small
     
-    ::    
+    ::
     
         $ export VARIABLE='some value'
         $ echo $VARIABLE
@@ -139,7 +170,7 @@ We can see this *environment* in Python, too::
     >>> print os.environ['VARIABLE']
     some_value
     >>> print os.environ.keys()
-    ['VERSIONER_PYTHON_PREFER_32_BIT', 'VARIABLE', 
+    ['VERSIONER_PYTHON_PREFER_32_BIT', 'VARIABLE',
      'LOGNAME', 'USER', 'PATH', ...]
 
 Altering the Environment
@@ -183,11 +214,11 @@ Lessons Learned
 
 ::
 
-    subprocess.Popen(args, bufsize=0, executable=None, 
-                     stdin=None, stdout=None, stderr=None, 
-                     preexec_fn=None, close_fds=False, 
+    subprocess.Popen(args, bufsize=0, executable=None,
+                     stdin=None, stdout=None, stderr=None,
+                     preexec_fn=None, close_fds=False,
                      shell=False, cwd=None, env=None, # <-------
-                     universal_newlines=False, startupinfo=None, 
+                     universal_newlines=False, startupinfo=None,
                      creationflags=0)
 
 
@@ -346,7 +377,7 @@ Back in your editor, add the following lines, just below ``import cgi``:
 
 .. class:: incremental
 
-Now, reload again.  
+Now, reload again.
 
 cgitb Output
 ------------
@@ -494,7 +525,7 @@ browser?
 
 .. class:: incremental
 
-A CGI Script must print it's results to stdout.
+A CGI Script must print its results to stdout.
 
 .. class:: incremental
 
@@ -724,7 +755,7 @@ A WSGI Appliction must:
 
 .. class:: incremental small
 
-* Be a callable (function, method, class) 
+* Be a callable (function, method, class)
 * Take an environment and a ``start_response`` callable as arguments
 * Call the ``start_response`` method.
 * Return an iterable of 0 or more strings, which are treated as the body of
@@ -767,8 +798,8 @@ app:
     def application(environ, start_response)
         status = "200 OK"
         body = "Hello World\n"
-        response_headers = [('Content-type', 'text/plain',
-                             'Content-length', len(body))]
+        response_headers = [('Content-type', 'text/plain'),
+                            ('Content-length', len(body))]
         start_response(status, response_headers)
         return [body]
 
@@ -855,7 +886,7 @@ server:
 The WSGI Environment
 --------------------
 
-.. class:: small incremental
+.. class:: small
 
 REQUEST_METHOD
   The HTTP request method, such as "GET" or "POST". This cannot ever be an
@@ -1067,7 +1098,7 @@ Dispatch
 --------
 
 We have to write an app that will map our incoming request path to some code
-that can handle that request.  
+that can handle that request.
 
 .. class:: incremental
 
@@ -1138,7 +1169,7 @@ My Solution
 Application Updates
 -------------------
 
-We need to hook our new router into the application.  
+We need to hook our new router into the application.
 
 .. class:: incremental
 
@@ -1256,7 +1287,7 @@ Click on a link to view the detail page. Does it load without error?
 Showing Details
 ---------------
 
-The next step of course is to polish up those detail pages.  
+The next step of course is to polish up those detail pages.
 
 .. class:: incremental
 
@@ -1377,6 +1408,15 @@ To submit your homework:
 
 * Commit your changes to your fork of the repo in github, then open a pull
   request.
+
+
+But Wait, There's More
+----------------------
+
+In addition, read and step through the quick tutorials on templates and
+database persistence in the assignments directory.
+
+Use your flaskenv Python, it has everything you need installed.
 
 
 Wrap-Up
