@@ -1,0 +1,105 @@
+﻿Merge remote-tracking branch 'uwpce/master'
+
+Conflicts:
+	assignments/session05/microblog/microblog.py
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# All conflicts fixed but you are still merging.
+#   (use "git commit" to conclude merge)
+#
+# Changes to be committed:
+#
+#	new file:   assignments/session02/completed_http_server.py
+#	modified:   assignments/session02/tasks.txt
+#	new file:   assignments/session04/flask_walkthrough-plain.html
+#	renamed:    resources/session05/sql/createdb.py -> assignments/session04/sql/createdb.py
+#	renamed:    resources/session05/sql/ddl.sql -> assignments/session04/sql/ddl.sql
+#	renamed:    resources/session05/sql/populatedb.py -> assignments/session04/sql/populatedb.py
+#	renamed:    resources/session05/sql/utils.py -> assignments/session04/sql/utils.py
+#	new file:   assignments/session04/sql_persistence_tutorial-plain.rst
+#	modified:   assignments/session04/tasks.txt
+#	new file:   assignments/session04/template_tutorial-plain.html
+#	modified:   assignments/session05/microblog/microblog.py
+#	deleted:    assignments/session05/microblog/microblog/microblog.cfg
+#	deleted:    assignments/session05/microblog/microblog/microblog.db
+#	deleted:    assignments/session05/microblog/microblog/microblog.py
+#	deleted:    assignments/session05/microblog/microblog/microblog_tests.py
+#	deleted:    assignments/session05/microblog/microblog/schema.sql
+#	deleted:    assignments/session05/microblog/microblog/templates/layout.html
+#	deleted:    assignments/session05/microblog/microblog/templates/login.html
+#	deleted:    assignments/session05/microblog/microblog/templates/show_entries.html
+#	new file:   assignments/session06/django_intro-plain.html
+#	new file:   assignments/session06/img/admin_index.png
+#	new file:   assignments/session06/img/django-admin-login.png
+#	new file:   assignments/session06/img/django-start.png
+#	new file:   assignments/session06/tasks.txt
+#	new file:   assignments/session07/mysite/manage.py
+#	new file:   assignments/session07/mysite/myblog/__init__.py
+#	new file:   assignments/session07/mysite/myblog/admin.py
+#	new file:   assignments/session07/mysite/myblog/fixtures/myblog_test_fixture.json
+#	new file:   assignments/session07/mysite/myblog/migrations/0001_initial.py
+#	new file:   assignments/session07/mysite/myblog/migrations/0002_auto__add_category.py
+#	new file:   assignments/session07/mysite/myblog/migrations/__init__.py
+#	new file:   assignments/session07/mysite/myblog/models.py
+#	renamed:    resources/session08/django_blog.css -> assignments/session07/mysite/myblog/static/django_blog.css
+#	new file:   assignments/session07/mysite/myblog/templates/detail.html
+#	new file:   assignments/session07/mysite/myblog/templates/list.html
+#	new file:   assignments/session07/mysite/myblog/tests.py
+#	new file:   assignments/session07/mysite/myblog/urls.py
+#	new file:   assignments/session07/mysite/myblog/views.py
+#	new file:   assignments/session07/mysite/mysite.db
+#	new file:   assignments/session07/mysite/mysite/__init__.py
+#	new file:   assignments/session07/mysite/mysite/settings.py
+#	new file:   assignments/session07/mysite/mysite/templates/base.html
+#	new file:   assignments/session07/mysite/mysite/templates/login.html
+#	new file:   assignments/session07/mysite/mysite/urls.py
+#	new file:   assignments/session07/mysite/mysite/wsgi.py
+#	new file:   assignments/session07/tasks.txt
+#	modified:   buildout.cfg
+#	modified:   docutils.conf
+#	modified:   resources/session04/wsgi/bookapp.py
+#	renamed:    assignments/session05/microblog/microblog/static/style.css -> resources/session05/microblog/static/style.css
+#	modified:   resources/session06/microblog/microblog_tests.py
+#	new file:   resources/session07/django_blog.css
+#	modified:   resources/session08/mysite/myblog/admin.py
+#	new file:   resources/session08/mysite/myblog/migrations/0001_initial.py
+#	new file:   resources/session08/mysite/myblog/migrations/0002_auto__add_category.py
+#	new file:   resources/session08/mysite/myblog/migrations/__init__.py
+#	modified:   resources/session08/mysite/myblog/models.py
+#	modified:   resources/session08/mysite/myblog/static/django_blog.css
+#	modified:   resources/session08/mysite/myblog/templates/detail.html
+#	modified:   resources/session08/mysite/myblog/templates/list.html
+#	modified:   resources/session08/mysite/myblog/tests.py
+#	modified:   resources/session08/mysite/myblog/urls.py
+#	modified:   resources/session08/mysite/myblog/views.py
+#	modified:   resources/session08/mysite/mysite/settings.py
+#	modified:   resources/session08/mysite/mysite/templates/base.html
+#	modified:   resources/session08/mysite/mysite/templates/login.html
+#	modified:   resources/session08/mysite/mysite/urls.py
+#	modified:   resources/session08/mysite/mysite/wsgi.py
+#	new file:   source/additional/flask_walkthrough.rst
+#	new file:   source/additional/git_cleanup.rst
+#	new file:   source/additional/sql_persistence_tutorial.rst
+#	new file:   source/additional/template_tutorial.rst
+#	modified:   source/img/admin_index.png
+#	new file:   source/img/flask_hello.png
+#	modified:   source/main/outline.rst
+#	modified:   source/main/readings.rst
+#	renamed:    source/presentations/session07.rst -> source/presentations/django_intro.rst
+#	modified:   source/presentations/session02.rst
+#	modified:   source/presentations/session03.rst
+#	modified:   source/presentations/session04.rst
+#	renamed:    source/presentations/session06.rst -> source/presentations/session05.rst
+#	modified:   source/presentations/session06.rst
+#	renamed:    source/presentations/session08.rst -> source/presentations/session07.rst
+#	modified:   source/presentations/session08.rst
+#
+
